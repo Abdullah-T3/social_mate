@@ -12,7 +12,7 @@ import 'core/routing/appRouting.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await dotenv.load();
+  await dotenv.load(fileName: ".env");
   await initDependencies();
 
   // Run the app with DevicePreview enabled
@@ -56,8 +56,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         checkboxTheme: CheckboxThemeData(
-          fillColor: MaterialStateProperty.all(Colors.white),
-          checkColor: MaterialStateProperty.all(ColorsManager.primaryColor),
+          fillColor: WidgetStateProperty.all(Colors.white),
+          checkColor: WidgetStateProperty.all(ColorsManager.primaryColor),
         ),
         progressIndicatorTheme: ProgressIndicatorThemeData(
           color: ColorsManager.primaryColor,
