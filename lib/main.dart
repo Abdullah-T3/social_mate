@@ -12,7 +12,7 @@ import 'core/routing/appRouting.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await dotenv.load(fileName: ".env");
+  await dotenv.load();
   await initDependencies();
 
   // Run the app with DevicePreview enabled
